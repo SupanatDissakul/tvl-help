@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Place</title>
+</head>
+<body>
+<h1>สถานที่</h1>
+
+<table border="1px">
+    <thead>
+    <tr>
+        <th>ชื่อ</th>
+        <th>จังหวัด</th>
+        <th>หมวดหมู่</th>
+        <th>ที่ตั้ง</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="place : ${allPlace}">
+        <td th:text="${place.place_name}"></td>
+        <td th:text="${place.province}"></td>
+        <td th:text="${place.category}"></td>
+        <td th:text="${place.link}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
