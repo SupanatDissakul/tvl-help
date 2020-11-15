@@ -25,4 +25,5 @@ public class PlaceService {
     public void createPlace(Place place){
         repository.save(place);
     }
-    }
+
+}
