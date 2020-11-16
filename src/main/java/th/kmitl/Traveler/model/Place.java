@@ -1,32 +1,32 @@
 package th.kmitl.Traveler.model;
 
 import javax.persistence.*;
-
 @Entity
 public class Place {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     private String place_name;
     private String link;
     private String province;
     private String category;
 
-    private Place() {}
+    public Place() {
+    }
 
-    public Place(String place_name, String place_link, String province, String category) {
+    public Place(String place_name, String link, String province, String category) {
         this.place_name = place_name;
-        this.link = place_link;
+        this.link = link;
         this.province = province;
         this.category = category;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
